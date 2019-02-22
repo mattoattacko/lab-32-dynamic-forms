@@ -4,75 +4,55 @@
 
 ## Author: Matthew McQuain, et al.
 
+## Resources
+
+[Repo](https://github.com/mattoattacko/lab-32-dynamic-forms)
+[Back End](https://codesandbox.io/s/3yk7o4pp86)
+[Front End](https://3yk7o4pp86.codesandbox.io/)
+
 ### Modules
 
 #### `app.js`
 
 ##### Exported Values and Methods
 
-The /src/components/App.js component exports the App.
-
-It contains showRecords() and render() functions.
-
-The showRecords() function modifies local state, setting the model based on user input.
-
-The render function returns the main application form, including some conditional logic for whether the RecordList is displayed.
+- app.js uses a component to export itself
+- showRecords() and render() are contained w/in app.js
+- local state is modified via showRecords()
+- showRecords() can be changed via the user
+- render() allows the user to return to app.js
+- render() also decides if RecordList is displayed
 
 #### `record.js`
 
-##### Exported Values and Methods
-
-The /src/components/record/record.js builds and exports a generic Records class, for rendering records of both schemas. It uses react-jsonschema-form to help build the form based on whichever schema model is passed iin.
-
-It also has a handleSubmit method for posting new records, and modifying current records.
+- the Records class is located in record.js
+- the Records class renders the player/team jsonschema
+- posting and modifying of records is done via the handleSubmit method
 
 #### `index.js Redux store`
 
-##### Exported Values and Methods
-
-The /src/store/index.js file builds and exports the Redux store. It uses a reducers variable to pull in the records reducer for state management.
+- state management for the Redux store is done in index.js
 
 #### `list.js`
 
-##### Exported Values and Methods
-
-The /src/components/record/lists.js file builds and exports the Records class for listing out all the records of whichever schema model is passed in. It contains deleteRecord(), editRecord(), reset(), and render() methods. DeleteRecord interacts with MapDispatchToProps to connect to the store.
+- list.js builds the Records class when a jasonschema is passed in
+- deleteRecord(), editRecord(), reset(), and render() methods are in list.js
 
 #### `actions.js`
 
-##### Exported Values and Methods
-
-The /src/components/record/actions.js exports a set of standard action methods: post, destroy, get, put, and patch.
+- actions.js exports the post, put, patch, get and destroy methods
 
 #### `reducers.js`
 
-##### Exported Values and Methods
-
-The /src/components/record/reducers.js file defines a function that handles state for the various actions, pulling out the type, playload, and from payload, the id, model, and record data, that are supplied by the action. It returns the appropriate object containing state, model, and record to operate on. It also defines the initial state.
+- reducers.js defines initial state via functions
 
 #### `if.js - Main`
 
-##### Exported Values and Methods
-
-The /src/components/if.js file defines an If component for managing conditional display of other items. When the if component wraps another component with a valid boolean test, that other component will either display or not.
+- the if.js file manages conditional display of our other items.
 
 #### `index.js - Main`
 
-##### Exported Values and Methods
-
-The src/index.js file is the point of entry to the application, creating a function Main() which returns the app, wrapped by the <Provider /> component from react-redux, making the store availabe for state management to all child components.
-
-### Setup
-
-#### Running the app
-
-- Endpoint: `https://3y1zo5zlzm.codesandbox.io/`
-
-#### Tests
-
-- How do you run tests?
-- What assertions were made?
-- What assertions need to be / should be made?
+- this is where the user comes into the app
 
 #### UML
 
