@@ -6,9 +6,9 @@
 
 ## Resources
 
-[Repo](https://github.com/mattoattacko/lab-32-dynamic-forms)
-[Back End](https://codesandbox.io/s/3yk7o4pp86)
-[Front End](https://3yk7o4pp86.codesandbox.io/)
+- [Repo](https://github.com/mattoattacko/lab-32-dynamic-forms)
+- [Back End](https://codesandbox.io/s/3yk7o4pp86)
+- [Front End](https://3yk7o4pp86.codesandbox.io/)
 
 ### Modules
 
