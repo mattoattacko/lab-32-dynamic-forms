@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import style from "./record.module.scss";
+import style from "./record.scss";
 import Record from "./record.js";
 import * as actions from "./actions.js";
 

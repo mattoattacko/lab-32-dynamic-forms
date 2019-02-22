@@ -1,43 +1,30 @@
-import React from 'react';
-import { connect } from 'react-redux';
-
-import Player from './player.js';
-
-import * as actions from '../store/players-actions.js';
+import React from "react";
+import RecordList from "./record/list.js";
+import If from "./If.js";
 
 class App extends React.Component {
-
-  deletePlayer = (id) => {
-    this.props.handleDelete(id);
+  constructor(props) {
+    super(props);
+    this.state = { model: null };
   }
+
+  showRecords = model => {
+    this.setState({ model });
+  };
 
   render() {
     return (
       <div>
-        <h2>Players</h2>
-        <ul>
-          {this.props.players.map( (player,idx) => 
-            <li key={idx}>
-              {player.name}
-              <button onClick={() => this.deletePlayer(idx)}>Delete</button>
-            </li>
-           )}
-        </ul>
-        <Player />
+        <h2>Show Info</h2>
+        <button onClick={() => this.showRecords("players")}>Players</button>
+        <button onClick={() => this.showRecords("teams")}>Teams</button>
+        <hr />
+        <If condition={this.state.model}>
+          <RecordList model={this.state.model} />
+        </If>
       </div>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  players: state.players,
-});
-
-const mapDispatchToProps = (dispatch, getState) => ({
-  handleDelete: (id) => dispatch(actions.destroy(id)),
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(App);
+export default App;
