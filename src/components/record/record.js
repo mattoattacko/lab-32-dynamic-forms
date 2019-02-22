@@ -1,12 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-
 import Form from "react-jsonschema-form";
-
+import * as actions from "./actions.js";
 import teamsSchema from "./teams.json";
 import playersSchema from "./players.json";
-
-import * as actions from "./actions.js";
 
 const uiSchema = {
   _id: { "ui:widget": "hidden" },

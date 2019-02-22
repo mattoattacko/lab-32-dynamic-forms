@@ -1,17 +1,19 @@
-let initialState = [];
+// not using for now
 
-export default (state = initialState, action) => {
-  let { type, payload } = action;
+// let initialState = [];
 
-  switch (type) {
+// export default (state = initialState, action) => {
+//   let { type, payload } = action;
 
-    case 'POST':
-      return [...state, payload];
+//   switch (type) {
 
-    case 'DELETE':
-      return state.filter((record, idx) => idx !== payload);
+//     case 'POST':
+//       return [...state, payload];
 
-    default:
-      return state;
-  }
-};
+//     case 'DELETE':
+//       return state.filter((record, idx) => idx !== payload);
+
+//     default:
+//       return state;
+//   }
+// };

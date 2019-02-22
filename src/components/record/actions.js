@@ -1,3 +1,10 @@
+// Implement all of the restful methods in the Redux Store for the player schema
+// GET - Retrieve one item
+// POST - Create New Item
+// PUT - Replace an item
+// PATCH - Update an item
+// DELETE - Remove an item
+
 export const post = payload => {
   return {
     type: "POST",

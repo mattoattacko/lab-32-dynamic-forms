@@ -1,10 +1,26 @@
 let initialState = {
   players: [
-    { name: "Abe", position: "P", bats: "R", throws: "R" },
-    { name: "Ben", position: "C", bats: "L", throws: "L" }
+    { name: "JD", position: "C", bats: "R", throws: "R" },
+    { name: "James", position: "P", bats: "R", throws: "L" },
+    { name: "Bob", position: "RF", bats: "R", throws: "R" },
+    { name: "Little Tommy", position: "CF", bats: "L", throws: "L" },
+    { name: "Matsui", position: "SS", bats: "L", throws: "R" }
   ],
-  teams: [{ name: "Astros" }, { name: "Mariners" }]
+  teams: [
+    { name: "Dodgers" },
+    { name: "Mariners" },
+    { name: "Marlins" },
+    { name: "Swallows" },
+    { name: "Giants" }
+  ]
 };
+
+// Implement all of the restful methods in the Redux Store for the player schema
+// GET - Retrieve one item
+// POST - Create New Item
+// PUT - Replace an item
+// PATCH - Update an item
+// DELETE - Remove an item
 
 export default (state = initialState, action) => {
   let { type, payload = {} } = action;
