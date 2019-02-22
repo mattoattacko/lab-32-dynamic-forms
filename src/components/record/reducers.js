@@ -2,8 +2,8 @@ let initialState = {
   players: [
     { name: "JD", position: "C", bats: "R", throws: "R" },
     { name: "James", position: "P", bats: "R", throws: "L" },
-    { name: "Bob", position: "RF", bats: "R", throws: "R" },
-    { name: "Little Tommy", position: "CF", bats: "L", throws: "L" },
+    { name: "Little Bobby Tables", position: "RF", bats: "R", throws: "R" },
+    { name: "Braddah IZ", position: "CF", bats: "L", throws: "L" },
     { name: "Matsui", position: "SS", bats: "L", throws: "R" }
   ],
   teams: [
